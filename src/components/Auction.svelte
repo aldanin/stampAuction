@@ -1,25 +1,48 @@
 <script>
+  import { onDestroy, onMount } from "svelte";
   import Exhibit from "./Exhibit.svelte";
   import repo from "../bl/exhibits";
+  import auctionStore from "../bl/AuctionStore";
 
+  let exhibits = [];
+  let unsubscribeStore;
 
-  let exhibits = repo;
+  onMount(() => {
+    unsubscribeStore = auctionStore.subscribe(store => {
+      exhibits = store.exhibits
+    });
+  });
+
+  onDestroy(() => {
+    unsubscribeStore();
+  });
 
   function onSubmitBid(ev) {
-      const detail = ev.detail;
-      console.log(detail);
-      updateAuction(detail);
+    const detail = ev.detail;
+    console.log(detail);
+    updateAuction(detail);
   }
 
   function updateAuction(detail) {
-      const {userId, id, bid} = detail;
+    const { userId, id, bid } = detail;
 
-    const found = exhibits.find(stamp=> stamp.id === id);
-    if(found) {
-        found.currentBid = bid;
-    }
+     auctionStore.update(store => {
+        const found = store.exhibits.find(exhibit => exhibit.id === id);
+        if (found) {
+          found.currentBid = bid;
+          found.bidderId = store.currentUser.id;
+        }
+            return {
+                ...store, exhibits: [...store.exhibits]
+            }
+        })
 
-    exhibits = [...exhibits]
+    // const found = exhibits.find(stamp => stamp.id === id);
+    // if (found) {
+    //   found.currentBid = bid;
+    // }
+
+    // exhibits = [...exhibits];
   }
 </script>
 
@@ -36,7 +59,7 @@
     max-height: 100%;
     min-height: 0;
 
-    .stamp-container {
+    .exhibit-container {
       padding: 10px 0;
     }
   }
@@ -44,8 +67,8 @@
 
 <div class="container">
   {#each exhibits as exhibit}
-    <div class="stamp-container">
-      <Exhibit exhibit={exhibit} on:submitBid={onSubmitBid} />
+    <div class="exhibit-container">
+      <Exhibit {exhibit} on:submitBid={onSubmitBid} />
     </div>
   {/each}
 

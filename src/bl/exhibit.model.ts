@@ -12,5 +12,6 @@ export type Exhibit = {
     currentBid: number,
     isSold: boolean,
     isOnSale: boolean,
+    bidderId?: string,
 }
 
