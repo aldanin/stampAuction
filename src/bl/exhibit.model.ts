@@ -13,5 +13,7 @@ export type Exhibit = {
     isSold: boolean,
     isOnSale: boolean,
     bidderId?: string,
+    // for demo:
+    bidCount?: number,
 }
 

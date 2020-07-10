@@ -2728,7 +2728,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (72:2) {#each exhibits as exhibit}
+    // (83:2) {#each exhibits as exhibit}
     function create_each_block(ctx) {
     	var div, t, current;
 
@@ -2744,7 +2744,7 @@ var app = (function () {
     			exhibit.$$.fragment.c();
     			t = space();
     			attr(div, "class", "exhibit-container svelte-1qwedtj");
-    			add_location(div, file$3, 72, 4, 2720);
+    			add_location(div, file$3, 83, 4, 3087);
     		},
 
     		m: function mount(target, anchor) {
@@ -2805,7 +2805,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
     			attr(div, "class", "container svelte-1qwedtj");
-    			add_location(div, file$3, 70, 0, 2660);
+    			add_location(div, file$3, 81, 0, 3027);
     		},
 
     		l: function claim(nodes) {
@@ -2880,10 +2880,21 @@ var app = (function () {
       const { userId, id, bid } = detail;
 
        auctionStore.update(store => {
-          const found = store.exhibits.find(exhibit => exhibit.id === id);
+          const foundIndex = store.exhibits.findIndex(exhibit => exhibit.id === id);
+          const found = store.exhibits[foundIndex];
           if (found) {
             found.currentBid = bid;
+            found.bidCount = found.bidCount === undefined ? 1 : found.bidCount + 1;
             found.bidderId = store.currentUser.id;
+
+            if (found.bidCount === 3) {
+              store.exhibits.forEach(exhibit => {
+                exhibit.isOnSale = false;
+              });
+
+              store.exhibits[foundIndex+1].isOnSale = true;
+
+            }
           }
               return {
                   ...store, exhibits: [...store.exhibits]

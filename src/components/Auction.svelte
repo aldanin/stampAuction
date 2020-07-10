@@ -27,10 +27,21 @@
     const { userId, id, bid } = detail;
 
      auctionStore.update(store => {
-        const found = store.exhibits.find(exhibit => exhibit.id === id);
+        const foundIndex = store.exhibits.findIndex(exhibit => exhibit.id === id);
+        const found = store.exhibits[foundIndex];
         if (found) {
           found.currentBid = bid;
+          found.bidCount = found.bidCount === undefined ? 1 : found.bidCount + 1;
           found.bidderId = store.currentUser.id;
+
+          if (found.bidCount === 3) {
+            store.exhibits.forEach(exhibit => {
+              exhibit.isOnSale = false;
+            })
+
+            store.exhibits[foundIndex+1].isOnSale = true;
+
+          }
         }
             return {
                 ...store, exhibits: [...store.exhibits]
