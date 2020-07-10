@@ -2202,7 +2202,7 @@ var app = (function () {
 
     const file$2 = "src\\components\\Exhibit.svelte";
 
-    // (111:6) {#if exhibit.isSold}
+    // (113:6) {#if exhibit.isSold}
     function create_if_block(ctx) {
     	var div2, div0, t_1, div1;
 
@@ -2214,12 +2214,12 @@ var app = (function () {
     			t_1 = space();
     			div1 = element("div");
     			div1.textContent = "Sold";
-    			attr(div0, "class", "sold-sign-x svelte-17bq0ln");
-    			add_location(div0, file$2, 112, 10, 6245);
-    			attr(div1, "class", "sold svelte-17bq0ln");
-    			add_location(div1, file$2, 113, 10, 6289);
-    			attr(div2, "class", "sold-sign svelte-17bq0ln");
-    			add_location(div2, file$2, 111, 8, 6210);
+    			attr(div0, "class", "sold-sign-x svelte-142wklm");
+    			add_location(div0, file$2, 114, 10, 6426);
+    			attr(div1, "class", "sold svelte-142wklm");
+    			add_location(div1, file$2, 115, 10, 6470);
+    			attr(div2, "class", "sold-sign svelte-142wklm");
+    			add_location(div2, file$2, 113, 8, 6391);
     		},
 
     		m: function mount(target, anchor) {
@@ -2237,7 +2237,7 @@ var app = (function () {
     	};
     }
 
-    // (142:8) <Button            variant="raised"            on:click={onClick}            disabled={!exhibit.isOnSale}>
+    // (144:8) <Button            variant="raised"            on:click={onClick}            disabled={!exhibit.isOnSale}>
     function create_default_slot$1(ctx) {
     	var t;
 
@@ -2320,38 +2320,38 @@ var app = (function () {
     			t22 = space();
     			button.$$.fragment.c();
     			attr(img, "src", img_src_value = `./stamps/${ctx.exhibit.item.img}`);
-    			attr(img, "class", "svelte-17bq0ln");
-    			add_location(img, file$2, 109, 6, 6128);
-    			add_location(span0, file$2, 119, 8, 6399);
-    			add_location(h3, file$2, 117, 6, 6356);
-    			attr(span1, "class", "caption svelte-17bq0ln");
-    			add_location(span1, file$2, 123, 10, 6515);
-    			add_location(span2, file$2, 124, 10, 6564);
-    			attr(div0, "class", "line svelte-17bq0ln");
-    			add_location(div0, file$2, 122, 8, 6485);
-    			attr(span3, "class", "caption svelte-17bq0ln");
-    			add_location(span3, file$2, 127, 10, 6655);
-    			add_location(span4, file$2, 128, 10, 6706);
-    			attr(div1, "class", "line svelte-17bq0ln");
-    			add_location(div1, file$2, 126, 8, 6625);
-    			attr(span5, "class", "caption svelte-17bq0ln");
-    			add_location(span5, file$2, 131, 10, 6798);
-    			add_location(span6, file$2, 132, 10, 6851);
-    			attr(div2, "class", "line bid svelte-17bq0ln");
-    			add_location(div2, file$2, 130, 8, 6764);
-    			attr(div3, "class", "details svelte-17bq0ln");
-    			add_location(div3, file$2, 121, 6, 6454);
+    			attr(img, "class", "svelte-142wklm");
+    			add_location(img, file$2, 111, 6, 6309);
+    			add_location(span0, file$2, 121, 8, 6580);
+    			add_location(h3, file$2, 119, 6, 6537);
+    			attr(span1, "class", "caption svelte-142wklm");
+    			add_location(span1, file$2, 125, 10, 6696);
+    			add_location(span2, file$2, 126, 10, 6745);
+    			attr(div0, "class", "line svelte-142wklm");
+    			add_location(div0, file$2, 124, 8, 6666);
+    			attr(span3, "class", "caption svelte-142wklm");
+    			add_location(span3, file$2, 129, 10, 6836);
+    			add_location(span4, file$2, 130, 10, 6887);
+    			attr(div1, "class", "line svelte-142wklm");
+    			add_location(div1, file$2, 128, 8, 6806);
+    			attr(span5, "class", "caption svelte-142wklm");
+    			add_location(span5, file$2, 133, 10, 6979);
+    			add_location(span6, file$2, 134, 10, 7032);
+    			attr(div2, "class", "line bid svelte-142wklm");
+    			add_location(div2, file$2, 132, 8, 6945);
+    			attr(div3, "class", "details svelte-142wklm");
+    			add_location(div3, file$2, 123, 6, 6635);
     			attr(input, "type", "number");
     			input.value = input_value_value = ctx.exhibit.currentBid;
     			input.disabled = input_disabled_value = !ctx.exhibit.isOnSale;
-    			add_location(input, file$2, 136, 8, 6954);
+    			add_location(input, file$2, 138, 8, 7135);
     			attr(div4, "class", "toolbar");
-    			add_location(div4, file$2, 135, 6, 6923);
-    			attr(div5, "class", "exhibit-wrap svelte-17bq0ln");
-    			add_location(div5, file$2, 108, 4, 6094);
-    			add_location(div6, file$2, 107, 2, 6083);
-    			attr(div7, "class", div7_class_value = "container " + (!ctx.exhibit.isOnSale ? 'disabled' : '') + " svelte-17bq0ln");
-    			add_location(div7, file$2, 106, 0, 6018);
+    			add_location(div4, file$2, 137, 6, 7104);
+    			attr(div5, "class", "exhibit-wrap svelte-142wklm");
+    			add_location(div5, file$2, 110, 4, 6275);
+    			add_location(div6, file$2, 109, 2, 6264);
+    			attr(div7, "class", div7_class_value = "container " + (!ctx.exhibit.isOnSale ? 'disabled' : '') + " svelte-142wklm");
+    			add_location(div7, file$2, 108, 0, 6199);
     		},
 
     		l: function claim(nodes) {
@@ -2452,7 +2452,7 @@ var app = (function () {
     			if (changed.$$scope) button_changes.$$scope = { changed, ctx };
     			button.$set(button_changes);
 
-    			if ((!current || changed.exhibit) && div7_class_value !== (div7_class_value = "container " + (!ctx.exhibit.isOnSale ? 'disabled' : '') + " svelte-17bq0ln")) {
+    			if ((!current || changed.exhibit) && div7_class_value !== (div7_class_value = "container " + (!ctx.exhibit.isOnSale ? 'disabled' : '') + " svelte-142wklm")) {
     				attr(div7, "class", div7_class_value);
     			}
     		},
@@ -2677,7 +2677,7 @@ var app = (function () {
     			exhibit.$$.fragment.c();
     			t = space();
     			attr(div, "class", "stamp-container svelte-19wk6cx");
-    			add_location(div, file$3, 49, 4, 2065);
+    			add_location(div, file$3, 49, 4, 2069);
     		},
 
     		m: function mount(target, anchor) {
@@ -2738,7 +2738,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
     			attr(div, "class", "container svelte-19wk6cx");
-    			add_location(div, file$3, 47, 0, 2005);
+    			add_location(div, file$3, 47, 0, 2009);
     		},
 
     		l: function claim(nodes) {
@@ -2823,7 +2823,7 @@ var app = (function () {
             found.currentBid = bid;
         }
 
-    $$invalidate('exhibits', exhibits$1 = [...exhibits$1]);
+        $$invalidate('exhibits', exhibits$1 = [...exhibits$1]);
       }
 
     	return { exhibits: exhibits$1, onSubmitBid };

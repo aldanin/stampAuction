@@ -114,6 +114,10 @@
     }
     .exhibit-wrap {
         border: solid 5px #a7a6a6;
+
+        .bid {
+          color:#b3b3b3;
+        }
     }
   }
 </style>

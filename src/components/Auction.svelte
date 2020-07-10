@@ -19,7 +19,7 @@
         found.currentBid = bid;
     }
 
-exhibits = [...exhibits]
+    exhibits = [...exhibits]
   }
 </script>
 
