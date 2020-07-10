@@ -154,6 +154,7 @@
       <div class="toolbar">
         <input
           type="number"
+          min={exhibit.currentBid}
           bind:this={bidInputValue}
           value={exhibit.currentBid}
           disabled={!exhibit.isOnSale} />

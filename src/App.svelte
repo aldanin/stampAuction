@@ -1,4 +1,4 @@
-<script lang="js">
+<script >
  import Auction from './components/Auction.svelte';
  
   export let name;

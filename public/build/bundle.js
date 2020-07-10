@@ -2243,7 +2243,7 @@ var app = (function () {
     	};
     }
 
-    // (144:8) <Button            variant="raised"            on:click={onClick}            disabled={!exhibit.isOnSale}>
+    // (145:8) <Button            variant="raised"            on:click={onClick}            disabled={!exhibit.isOnSale}>
     function create_default_slot$1(ctx) {
     	var t;
 
@@ -2265,7 +2265,7 @@ var app = (function () {
     }
 
     function create_fragment$3(ctx) {
-    	var div7, div6, div5, img, img_src_value, t0, t1, h3, t2_value = ctx.exhibit.item.name + "", t2, t3, span0, t4, t5_value = ctx.exhibit.item.year + "", t5, t6, t7, div3, div0, span1, t9, span2, t10_value = ctx.exhibit.item.country + "", t10, t11, div1, span3, t13, span4, t14_value = ctx.exhibit.catPrice + "", t14, t15, t16, div2, span5, t18, span6, t19_value = ctx.exhibit.currentBid + "", t19, t20, t21, div4, input, input_value_value, input_disabled_value, t22, div7_class_value, current;
+    	var div7, div6, div5, img, img_src_value, t0, t1, h3, t2_value = ctx.exhibit.item.name + "", t2, t3, span0, t4, t5_value = ctx.exhibit.item.year + "", t5, t6, t7, div3, div0, span1, t9, span2, t10_value = ctx.exhibit.item.country + "", t10, t11, div1, span3, t13, span4, t14_value = ctx.exhibit.catPrice + "", t14, t15, t16, div2, span5, t18, span6, t19_value = ctx.exhibit.currentBid + "", t19, t20, t21, div4, input, input_min_value, input_value_value, input_disabled_value, t22, div7_class_value, current;
 
     	var if_block = (ctx.exhibit.isSold) && create_if_block();
 
@@ -2348,6 +2348,7 @@ var app = (function () {
     			attr(div3, "class", "details svelte-142wklm");
     			add_location(div3, file$2, 123, 6, 6635);
     			attr(input, "type", "number");
+    			attr(input, "min", input_min_value = ctx.exhibit.currentBid);
     			input.value = input_value_value = ctx.exhibit.currentBid;
     			input.disabled = input_disabled_value = !ctx.exhibit.isOnSale;
     			add_location(input, file$2, 138, 8, 7135);
@@ -2443,6 +2444,10 @@ var app = (function () {
 
     			if ((!current || changed.exhibit) && t19_value !== (t19_value = ctx.exhibit.currentBid + "")) {
     				set_data(t19, t19_value);
+    			}
+
+    			if ((!current || changed.exhibit) && input_min_value !== (input_min_value = ctx.exhibit.currentBid)) {
+    				attr(input, "min", input_min_value);
     			}
 
     			if ((!current || changed.exhibit) && input_value_value !== (input_value_value = ctx.exhibit.currentBid)) {
@@ -2949,7 +2954,7 @@ var app = (function () {
     			main = element("main");
     			auction.$$.fragment.c();
     			attr(main, "class", "svelte-1it13zf");
-    			add_location(main, file$4, 23, 0, 1197);
+    			add_location(main, file$4, 23, 0, 1188);
     		},
 
     		l: function claim(nodes) {
