@@ -32,7 +32,7 @@
         if (found) {
           found.currentBid = bid;
           found.bidCount = found.bidCount === undefined ? 1 : found.bidCount + 1;
-          found.bidderId = store.currentUser.id;
+          found.bidderId = store.currentUser.id; 
 
           if (found.bidCount === 3) {
             store.exhibits.forEach(exhibit => {
