@@ -29,6 +29,10 @@
       bid: bidInputValue.value ? parseInt(bidInputValue.value) : undefined
     });
   }
+
+  function onForge() {
+    alert('for')
+  }
 </script>
 
 <style type="text/scss">
@@ -120,6 +124,17 @@
         }
     }
   }
+  
+  .forged {
+    background-color: red;
+    color: #900000;
+    border-radius: 50%;
+    height: 30px;
+    line-height: 1em;
+    margin-right: 20px;
+    visibility: hidden;
+
+  }
 </style>
 
 <div class="container {!exhibit.isOnSale ? 'disabled' : ''}">
@@ -152,6 +167,7 @@
         </div>
       </div>
       <div class="toolbar">
+      <button class="forged" on:click={onForge} title="Click only if Forgery">!!!</button>
         <input
           type="number"
           min={exhibit.currentBid}
