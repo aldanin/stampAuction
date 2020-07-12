@@ -1,5 +1,7 @@
 <script >
-
+ import Auction from './components/Auction.svelte';
+ 
+  export let name;
 </script>
 
 <style type="text/scss">
@@ -18,5 +20,5 @@
 </style>
 
 <main>
-Main
+<Auction/>
 </main>
