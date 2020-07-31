@@ -125,28 +125,18 @@
     }
   }
   
-  .forged {
-    background-color: red;
-    color: #900000;
-    border-radius: 50%;
-    height: 30px;
-    line-height: 1em;
-    margin-right: 20px;
-    visibility: hidden;
-
-  }
 </style>
 
 <div class="container {!exhibit.isOnSale ? 'disabled' : ''}">
   <div>
     <div class="exhibit-wrap">
       <img src={`./stamps/${exhibit.item.img}`} />
-      {#if exhibit.isSold}
+      <!-- {#if exhibit.isSold}
         <div class="sold-sign">
           <div class="sold-sign-x">x</div>
           <div class="sold">Sold</div>
         </div>
-      {/if}
+      {/if} -->
 
       <h3>
         {exhibit.item.name}
@@ -167,7 +157,6 @@
         </div>
       </div>
       <div class="toolbar">
-      <button class="forged" on:click={onForge} title="Click only if Forgery">!!!</button>
         <input
           type="number"
           min={exhibit.currentBid}

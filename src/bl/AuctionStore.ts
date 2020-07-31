@@ -29,8 +29,10 @@ const auctionStore = {
                 if (found.bidCount === 3) {
                     store.exhibits.forEach(exhibit => {
                         exhibit.isOnSale = false;
+
                     })
 
+                    store.exhibits[foundIndex].isSold = true;
                     store.exhibits[foundIndex + 1].isOnSale = true;
 
                 }
