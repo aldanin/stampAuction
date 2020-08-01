@@ -38,7 +38,7 @@
 <div class="container">
   {#each exhibits as exhibit}
     <div class="exhibit-container">
-      <Crazy goCrazy={exhibit.isSold}><Exhibit {exhibit} on:submitBid={onSubmitBid} /></Crazy>
+      <Crazy goCrazy={false}><Exhibit {exhibit} on:submitBid={onSubmitBid} /></Crazy>
     </div>
   {/each}
 

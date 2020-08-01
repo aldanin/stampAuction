@@ -2,7 +2,7 @@
   import { fade } from "svelte/transition";
   import { elasticOut } from "svelte/easing";
 
-  export let visible = true;
+  let visible = true;
   export let goCrazy = false;
 
   $: {
